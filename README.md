@@ -1,4 +1,4 @@
-# vue-test
+# notifier-front
 
 ## Project setup
 ```
