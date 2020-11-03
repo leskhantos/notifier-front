@@ -16,7 +16,7 @@
             <template #button-content>
               <em>Пользователь</em>
             </template>
-            <b-dropdown-item href="#">Профиль</b-dropdown-item>
+            <b-dropdown-item href="/profile">Профиль</b-dropdown-item>
             <b-dropdown-item href="#">Выход</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
