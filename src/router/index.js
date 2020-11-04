@@ -1,8 +1,8 @@
-import Template from '@/Template.vue'
-import GlobalParameters from '@/GlobalParameters.vue'
-import History from '@/History.vue'
-import Welcome from "@/Welcome"
-import Profile from "@/Profile";
+import Template from '@/pages/Template.vue'
+import GlobalParameters from '@/pages/GlobalParameters.vue'
+import History from '@/pages/History.vue'
+import Welcome from "@/pages/Welcome"
+import Profile from "@/pages/Profile";
 export default [
     { path: '/', component: Welcome, name: "index" },
     { path: '/templates', component: Template, name: "templates" },
