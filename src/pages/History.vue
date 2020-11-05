@@ -1,12 +1,15 @@
 <template>
 <div>
-<h1>History</h1>
+  <nav-bar/>
+  <h1>History</h1>
 </div>
 </template>
 
 <script>
+import NavBar from "@/components/NavBar";
 export default {
-  name: "History"
+  name: "History",
+  components: {NavBar}
 }
 </script>
 

@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  name: "TemplateCreatePage",
+  name: "CreateTemplate",
   data() {
     return {
       form: {

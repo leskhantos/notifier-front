@@ -1,5 +1,6 @@
 <template>
   <div>
+    <nav-bar/>
     <div class="row">
       <div class="col-9"></div>
       <div class="col-3 p-1">
@@ -11,8 +12,10 @@
 </template>
 
 <script>
+import NavBar from "@/components/NavBar";
 export default {
   name: "GlobalParameters",
+  components: {NavBar},
   data() {
     return {
       fields: [

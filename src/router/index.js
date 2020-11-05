@@ -1,7 +1,7 @@
 import Template from '@/pages/Template.vue'
 import GlobalParameters from '@/pages/GlobalParameters.vue'
 import History from '@/pages/History.vue'
-import Welcome from "@/pages/Welcome"
+import Welcome from "@/pages/Login"
 import Profile from "@/pages/Profile";
 export default [
     { path: '/', component: Welcome, name: "index" },
