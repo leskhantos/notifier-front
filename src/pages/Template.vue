@@ -2,15 +2,36 @@
   <div>
     <nav-bar/>
     <div class="row">
+      <div class="col-12">
+        <b-alert
+            :show="dismissCountDown"
+            dismissible
+            variant="success"
+            @dismissed="dismissCountDown=0"
+            @dismiss-count-down="countDownChanged"
+        >
+          Отправлено
+        </b-alert>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-10">
         <b-breadcrumb :items="breads" style="background-color: white"></b-breadcrumb>
       </div>
       <div class="col-2 p-1">
         <b-button variant="success"  v-b-modal.modal-1>Создать шаблон</b-button>
-        <b-button variant="warning"  v-b-modal.modal-2>Редактировать шаблон</b-button>
       </div>
     </div>
-    <b-table striped hover :items="items" :fields="fields" responsive="responsive"></b-table>
+    <b-table striped hover :items="items" :fields="fields" responsive="responsive">
+      <template #cell(action)="">
+        <b-button variant="warning"  v-b-modal.modal-2>
+          <b-icon-pen-fill/>
+        </b-button>
+        <b-button variant="primary" class="ml-1" @click="sendRequest">
+          <b-icon-play-fill/>
+        </b-button>
+      </template>
+    </b-table>
     <b-modal id="modal-1" title="Создание шаблона">
       <create-template/>
     </b-modal>
@@ -21,6 +42,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import CreateTemplate from "@/components/CreateTemplate";
 import NavBar from "@/components/NavBar";
 import EditTemplate from "@/components/EditTemplate";
@@ -50,6 +72,11 @@ export default {
           label: 'Контент',
           sortable: false
         },
+        {
+          key: 'action',
+          label: 'Action',
+          sortable: false
+        },
       ],
       items: [
         {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
@@ -64,10 +91,38 @@ export default {
           text: 'Шаблоны',
           active: true
         }
-      ]
+      ],
+      dismissSecs: 3,
+      dismissCountDown: 0
     }
   },
   methods:{
+    countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
+    },
+    sendRequest(){
+      const options = {
+        headers: {
+          'Content-Type': 'application/json',
+          'SOURCE_SYSTEM':'NTF'
+        }
+      };
+      this.dismissCountDown = this.dismissSecs
+      axios.post('http://10.8.53.92:8080/api/v2/message', {
+          "template": "TEST",
+          "language": "KAZ",
+          "phoneNumber": "7473569355",
+          "cuid": "4817630"
+        },
+            options
+        )
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+    }
   }
 }
 </script>
