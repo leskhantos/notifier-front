@@ -7,11 +7,6 @@
 <script>
 export default {
   name: 'App',
-  methods:{
-    next(){
-      this.$router.push('/asd')
-    }
-  }
 }
 </script>
 

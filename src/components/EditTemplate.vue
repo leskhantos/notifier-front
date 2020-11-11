@@ -31,7 +31,7 @@
         <b-form-textarea
             class="mt-1"
             id="textarea"
-            v-model="form.text"
+            v-model="form.content"
             placeholder="Контент"
             rows="3"
             max-rows="6"
@@ -65,10 +65,10 @@ export default {
     },
     onReset(evt) {
       evt.preventDefault()
-      this.form.email = ''
-      this.form.name = ''
-      this.form.food = null
-      this.form.checked = []
+      this.form.code = ''
+      this.form.content = ''
+      this.form.delivery_channel = null
+      this.form.language = null
       this.show = false
       this.$nextTick(() => {
         this.show = true
