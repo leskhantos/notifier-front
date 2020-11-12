@@ -30,6 +30,9 @@
         <b-button variant="primary" class="ml-1" @click="sendRequest">
           <b-icon-play-fill/>
         </b-button>
+        <b-button variant="success" class="ml-1" v-b-modal.modal-3>
+          <b-icon-bar-chart/>
+        </b-button>
       </template>
     </b-table>
     <b-modal id="modal-1" title="Создание шаблона">
@@ -37,6 +40,9 @@
     </b-modal>
     <b-modal id="modal-2" title="Редактирование шаблона">
       <edit-template/>
+    </b-modal>
+    <b-modal id="modal-3" title="Статистика шаблона">
+      <template-statistics/>
     </b-modal>
   </div>
 </template>
@@ -46,9 +52,10 @@ import axios from 'axios'
 import CreateTemplate from "@/components/CreateTemplate";
 import NavBar from "@/components/NavBar";
 import EditTemplate from "@/components/EditTemplate";
+import TemplateStatistics from "@/components/TemplateStatistics";
 export default {
   name: "Template",
-  components: {EditTemplate, NavBar, CreateTemplate},
+  components: {TemplateStatistics, EditTemplate, NavBar, CreateTemplate},
   data() {
     return {
       fields: [

@@ -10,6 +10,7 @@
           <b-nav-item href="/templates">Шаблоны</b-nav-item>
           <b-nav-item href="/global-parameters">Глобальные параметры</b-nav-item>
           <b-nav-item href="/history">История</b-nav-item>
+          <b-nav-item href="/statistics">Статистика</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item-dropdown right>
