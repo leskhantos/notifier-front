@@ -35,13 +35,13 @@
         </b-button>
       </template>
     </b-table>
-    <b-modal id="modal-1" title="Создание шаблона">
+    <b-modal id="modal-1" size="lg" title="Создание шаблона">
       <create-template/>
     </b-modal>
-    <b-modal id="modal-2" title="Редактирование шаблона">
+    <b-modal id="modal-2" size="lg" title="Редактирование шаблона">
       <edit-template/>
     </b-modal>
-    <b-modal id="modal-3" title="Статистика шаблона">
+    <b-modal id="modal-3" size="xl" title="Статистика шаблона">
       <template-statistics/>
     </b-modal>
   </div>
