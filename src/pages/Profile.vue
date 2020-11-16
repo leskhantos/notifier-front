@@ -1,19 +1,18 @@
 <template>
-  <div>
-    <nav-bar/>
+  <ntf-page>
     <b-card img-src="https://placekitten.com/300/300" img-alt="Card image" img-left class="mb-2">
       <b-card-text>
         Некоторые данные о профиле.
       </b-card-text>
     </b-card>
-  </div>
+  </ntf-page>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import NtfPage from "@/plugins/ntfUI/pages/ntfPage";
 export default {
   name: "Profile",
-  components: {NavBar}
+  components: {NtfPage},
 }
 </script>
 

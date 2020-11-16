@@ -1,21 +1,23 @@
 <template>
-  <div>
-    <nav-bar/>
-    <div class="row">
-      <div class="col-9"></div>
-      <div class="col-3 p-1">
-        <b-button variant="success"  v-b-modal.modal-1>Создать глобальный параметр</b-button>
+  <ntf-page>
+      <div class="row">
+        <div class="col-9"></div>
+        <div class="col-3 p-1">
+          <b-button variant="success"  v-b-modal.modal-1>Создать глобальный параметр</b-button>
+        </div>
       </div>
-    </div>
-    <b-table striped hover :items="items" :fields="fields" responsive="responsive"></b-table>
-  </div>
+    <ntf-page-body>
+      <b-table striped hover :items="items" :fields="fields" responsive="responsive"></b-table>
+    </ntf-page-body>
+  </ntf-page>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import NtfPage from "@/plugins/ntfUI/pages/ntfPage";
+import NtfPageBody from "@/plugins/ntfUI/pages/ntfPageBody";
 export default {
   name: "GlobalParameters",
-  components: {NavBar},
+  components: {NtfPageBody, NtfPage},
   data() {
     return {
       fields: [

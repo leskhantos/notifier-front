@@ -1,16 +1,15 @@
 <template>
-  <div>
-    <nav-bar/>
+  <ntf-page>
         <apexchart type="area" height="350" :options="chartOptions" :series="series"></apexchart>
-  </div>
+  </ntf-page>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import ntfPage from "@/plugins/ntfUI/pages/ntfPage";
 export default {
   name: "Statistics",
   components: {
-    NavBar
+    ntfPage
   },
   data() {
 return {

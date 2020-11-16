@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <nav-bar/>
+  <ntf-page>
     <div class="row">
       <div class="col-12">
         <b-alert
@@ -44,18 +43,18 @@
     <b-modal id="modal-3" size="xl" title="Статистика шаблона">
       <template-statistics/>
     </b-modal>
-  </div>
+  </ntf-page>
 </template>
 
 <script>
 import axios from 'axios'
 import CreateTemplate from "@/components/CreateTemplate";
-import NavBar from "@/components/NavBar";
 import EditTemplate from "@/components/EditTemplate";
 import TemplateStatistics from "@/components/TemplateStatistics";
+import NtfPage from "@/plugins/ntfUI/pages/ntfPage";
 export default {
   name: "Template",
-  components: {TemplateStatistics, EditTemplate, NavBar, CreateTemplate},
+  components: {NtfPage, TemplateStatistics, EditTemplate, CreateTemplate},
   data() {
     return {
       fields: [

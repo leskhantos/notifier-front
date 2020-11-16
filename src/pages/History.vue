@@ -1,15 +1,14 @@
 <template>
-<div>
-  <nav-bar/>
-  <h1>History</h1>
-</div>
+  <ntf-page>
+    <h1>History</h1>
+  </ntf-page>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
+import NtfPage from "@/plugins/ntfUI/pages/ntfPage";
 export default {
   name: "History",
-  components: {NavBar}
+  components: {NtfPage},
 }
 </script>
 
