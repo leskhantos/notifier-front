@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import {setTokenHeaders} from "@/api";
+import VueCookies from 'vue-cookies'
 import '@/plugins/apexcharts'
 
 //bootstrap import and use
@@ -13,6 +15,10 @@ Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 
+const token = VueCookies.get('Authorization')
+if (token){
+  setTokenHeaders(token)
+}
 new Vue({
   render: h => h(App),
   router,
