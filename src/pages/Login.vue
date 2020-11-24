@@ -67,7 +67,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -107,7 +106,6 @@
     }
     button {
       background-color: #db132e;
-      border: none;
       color: white;
       padding: 10px 43%;
       text-align: center;
@@ -123,14 +121,4 @@
       border: 2px solid #db132e;
     }
   }
-
-
-  /*.child {*/
-  /*  width: 30%;*/
-  /*  border: 3px;*/
-  /*  position: absolute;*/
-  /*  top: 50%;*/
-  /*  left: 35%;*/
-  /*  transform: translate(0%, 50%);*/
-  /*}*/
   </style>
