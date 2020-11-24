@@ -14,7 +14,7 @@ export default {
 
 <style>
 #app {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: #e8e8e8 ;
