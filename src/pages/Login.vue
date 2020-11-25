@@ -43,6 +43,7 @@
         // .catch(()=>{
         //   console.log('err')
         // })
+        this.$store.dispatch('user/loginTo')
         this.$router.push('templates')
       }
     }

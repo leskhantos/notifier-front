@@ -1,4 +1,4 @@
-const getUser = state =>state.user
+const getToken = state =>state.token
 export default {
-    getUser
+    getToken
 }

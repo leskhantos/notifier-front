@@ -1,6 +1,6 @@
-const LOGIN = (state,token)=>{
+const SET_TOKEN = (state,token)=>{
     state.token = token
 }
 export default {
-    LOGIN
+    SET_TOKEN
 }

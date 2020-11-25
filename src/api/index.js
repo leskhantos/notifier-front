@@ -7,5 +7,5 @@ export function setTokenHeaders(token){
     axios.defaults.headers.common['Authorization'] = 'Bearer'+token
 }
 export function Login(data){
-    return axios.post(Settings.host+'/api/login',data)
+    return axios.post(Settings.host+'/api/login', data)
 }
