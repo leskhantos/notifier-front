@@ -21,7 +21,7 @@
         <b-button variant="success"  v-b-modal.modal-1>Создать шаблон</b-button>
       </div>
     </div>
-    <b-table striped hover :items="items" :fields="fields" responsive="responsive">
+    <b-table striped hover sticky-header :items="items" :fields="fields" responsive="responsive">
       <template #cell(action)="">
         <b-button variant="warning"  v-b-modal.modal-2>
           <b-icon-pen-fill/>
@@ -87,6 +87,17 @@ export default {
       items: [
         {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
         {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+        {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
+        {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+        {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
+        {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+        {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
+        {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+        {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
+        {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+        {code: 'TEST', delivery_channel: 'PUSH', language: 'RUS',content:'Test notification.' },
+        {code: 'SAS', delivery_channel: 'PUSH', language: 'RUS',content:'SAS notification.' },
+
       ],
       breads:[
         {

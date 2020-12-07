@@ -7,7 +7,7 @@
         </div>
       </div>
     <ntf-page-body>
-      <b-table striped hover :items="items" :fields="fields" responsive="responsive"></b-table>
+      <b-table striped hover sticky-header :items="items" :fields="fields" responsive="responsive"></b-table>
     </ntf-page-body>
   </ntf-page>
 </template>
@@ -32,6 +32,14 @@ export default {
           sortable: false
         },],
       items: [
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
+        { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
         { code: 'NOTIFICATION_LANGUAGE_DEFAULT', value: 'RUS'},
       ]
     }
