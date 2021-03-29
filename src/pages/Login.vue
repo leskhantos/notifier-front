@@ -24,6 +24,8 @@
 </template>
 
   <script>
+  import axios from 'axios'
+
   export default {
     name: "Welcome",
     data(){
@@ -36,15 +38,14 @@
     },
     methods:{
       authorization(){
-        // this.$store.dispatch('user/loginTo',this.payload)
-        // .then(()=>{
-        //   this.$router.push('templates')
-        // })
-        // .catch(()=>{
-        //   console.log('err')
-        // })
-        this.$store.dispatch('user/loginTo')
-        this.$router.push('templates')
+        axios.post("http://localhost:8082/login", this.payload)
+            .then((response)=>{
+                this.$store.commit('user/TOKEN',response.data.jwt)
+                this.$store.commit('user/USER',response.data.userDetails)
+                this.$router.push('templates')
+              }).catch(()=>{
+             console.log('err')
+           })
       }
     }
   }

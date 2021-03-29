@@ -1,6 +1,9 @@
-const SET_TOKEN = (state,token)=>{
+const TOKEN = (state,token)=>{
     state.token = token
 }
+const USER = (state,user)=>{
+    state.user = user
+}
 export default {
-    SET_TOKEN
+    TOKEN, USER
 }

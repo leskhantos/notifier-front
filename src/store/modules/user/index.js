@@ -5,6 +5,7 @@ import mutations from './mutations'
 
 const state ={
     token:'',
+    user:{}
 }
 
 export default {
