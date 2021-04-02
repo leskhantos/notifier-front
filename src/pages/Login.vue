@@ -38,7 +38,7 @@
     },
     methods:{
       authorization(){
-        axios.post("http://localhost:8082/login", this.payload)
+        axios.post("http://10.8.53.92:8080/backend/login", this.payload)
             .then((response)=>{
                 this.$store.commit('user/TOKEN',response.data.jwt)
                 this.$store.commit('user/USER',response.data.userDetails)
