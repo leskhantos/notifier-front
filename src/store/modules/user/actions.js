@@ -1,15 +1,17 @@
-import {Login} from '@/api'
+import axios from 'axios'
 
-const loginTo = ({commit}, payload)=>{
-    return Login(payload)
-        .then((response)=>{
-            const token = response.data
-            commit('TOKEN',token)
-        }).catch((error)=>{
-            console.log(error)
+const login = ({ commit }, credentials)=>{
+    return axios
+        .post('http://10.8.53.92:8080/backend/login', credentials)
+        .then(({ data }) => {
+            commit('SET_USER_DATA', data)
         })
+}
+const logout =  ({ commit }) => {
+    commit('LOGOUT')
 }
 
 export default {
-    loginTo
+    login,
+    logout
 }

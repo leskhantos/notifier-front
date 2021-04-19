@@ -13,6 +13,7 @@
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.18.1",
     "core-js": "^3.6.5",
+    "jsonwebtoken": "^8.5.1",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vue": "^2.6.12",

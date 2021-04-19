@@ -52,9 +52,14 @@ import CreateTemplate from "@/components/CreateTemplate";
 import EditTemplate from "@/components/EditTemplate";
 import TemplateStatistics from "@/components/TemplateStatistics";
 import NtfPage from "@/plugins/ntfUI/pages/ntfPage";
+import { authComputed } from "@/plugins/vuex/helpers"
+
 export default {
   name: "Template",
   components: {NtfPage, TemplateStatistics, EditTemplate, CreateTemplate},
+  computed: {
+    ...authComputed
+  },
   data() {
     return {
       fields: [

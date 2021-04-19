@@ -24,7 +24,6 @@
 </template>
 
   <script>
-  import axios from 'axios'
 
   export default {
     name: "Welcome",
@@ -38,14 +37,12 @@
     },
     methods:{
       authorization(){
-        axios.post("http://10.8.53.92:8080/backend/login", this.payload)
-            .then((response)=>{
-                this.$store.commit('user/TOKEN',response.data.jwt)
-                this.$store.commit('user/USER',response.data.userDetails)
-                this.$router.push('templates')
-              }).catch(()=>{
-             console.log('err')
-           })
+        this.$store
+            .dispatch('user/login', this.payload)
+            .then(() => { this.$router.push({ name: 'templates' }) })
+            .catch(err => {
+              this.error = err.response.data.error
+            })
       }
     }
   }
